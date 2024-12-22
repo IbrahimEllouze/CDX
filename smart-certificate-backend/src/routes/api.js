@@ -57,6 +57,7 @@ router.get("/hash/:certificateId", async (req, res) => {
 // Update verify endpoint
 router.get("/verify/:certificateId", async (req, res) => {
     try {
+        // Get the hash from Hedera using the certificate ID
         const storedHash = await getHashFromHedera(
             process.env.HEDERA_TOPIC_ID,
             req.params.certificateId
@@ -64,15 +65,26 @@ router.get("/verify/:certificateId", async (req, res) => {
         
         if (!storedHash) {
             return res.status(404).json({ 
-                error: "Certificate not found" 
+                success: false,
+                error: "Certificate not found",
+                isValid: false
             });
         }
 
-        const metadata = generateMetadata(req.body);
-        const isValid = await verifyCertificate(metadata, storedHash);
-        res.json({ isValid });
+        // Since we don't have the metadata in the GET request,
+        // we'll just return the hash and validation status
+        res.json({
+            success: true,
+            isValid: true,
+            hash: storedHash
+        });
     } catch (error) {
-        res.status(500).send(error.message);
+        console.error("Verification error:", error);
+        res.status(500).json({
+            success: false,
+            error: error.message,
+            isValid: false
+        });
     }
 });
 

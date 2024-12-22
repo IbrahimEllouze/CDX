@@ -8,17 +8,28 @@
     "dev": "nodemon src/server.js",
     "test": "mocha"
   },
-  "keywords": ["blockchain", "hedera", "smart-certificate"],
+  "keywords": [
+    "blockchain",
+    "hedera",
+    "smart-certificate"
+  ],
   "author": "Your Name",
   "license": "ISC",
   "dependencies": {
     "@hashgraph/sdk": "^2.56.0",
     "@openzeppelin/contracts": "^5.1.0",
+    "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-tabs": "^1.1.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "ipfs-http-client": "^60.0.1",
-    "qrcode": "^1.5.4"
+    "lucide-react": "^0.469.0",
+    "qrcode": "^1.5.4",
+    "sonner": "^1.7.1"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.2.3",
