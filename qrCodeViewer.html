@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Viewer</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            max-width: 300px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .info {
+            margin-top: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Certificate QR Code</h1>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAYAAAB1PADUAAAAAklEQVR4AewaftIAAATiSURBVO3BQY4cSRIEQdNA/f/Lun30UwCJ9OohuSaCP1K15KRq0UnVopOqRSdVi06qFp1ULTqpWnRSteikatFJ1aKTqkUnVYtOqhadVC06qVr0yUtAfpOaGyCTmgnIpOYNIJOaCciNmhsgv0nNGydVi06qFp1ULfpkmZpNQJ5QMwHZBGRSMwGZ1NwAmdTcqNkEZNNJ1aKTqkUnVYs++TIgT6h5A8gTQCY1N2reALIJyBNqvumkatFJ1aKTqkWf/OPUTEBugExqboBMaiYgk5p/2UnVopOqRSdViz75xwG5UfMEkEnNjZobIJOav9lJ1aKTqkUnVYs++TI13wTkRs0E5AbINwHZpOZPclK16KRq0UnVok+WAfkvqZmATGomIJOaCcikZgIyqZmATGomIE8A+ZOdVC06qVp0UrUIf+QfBuRGzRNAJjUTkEnN/5OTqkUnVYtOqhZ98hKQSc0NkEnNBORGzQTkRs0NkCfUTEAmNU8AuVEzAZnU/ElOqhadVC06qVr0yUtqboBMaiYgN2qeUHMD5EbNBOSb1ExAJiCTmhsgk5obIJOaN06qFp1ULTqpWvTJS0AmNZOaJ9RMQCY1TwC5UfNNQJ5QMwG5AXID5EbNppOqRSdVi06qFn3yh1Nzo2YCMqm5AXKjZgIyqdkEZFIzAfmTnVQtOqladFK1CH/kFwG5UTMBmdRMQL5JzQTkDTU3QG7U3ACZ1ExAbtS8cVK16KRq0UnVIvyRRUAmNU8AmdQ8AeQJNTdAJjVvAJnUTEAmNW8AmdR800nVopOqRSdViz5ZpmYCcqNmUjMBuVFzo+YGyI2aTWo2AZnU3AC5UfPGSdWik6pFJ1WLPvllaiYgN2pugDwBZBOQN9RMaiYgN2omIJOaCcikZtNJ1aKTqkUnVYs+eQnIjZobNTdAJjWTmgnIjZobIBOQN9RMQG6ATGr+JidVi06qFp1ULcIf+SIgk5oJyKTmBsik5g0gT6h5AsikZgIyqZmA3Kh5A8ik5o2TqkUnVYtOqhZ98hKQSc0mIJOaCciNmifUTECeADKpuVGzCcikZgLyTSdVi06qFp1ULfrkJTXfpOYJNTdAJjU3aiYgbwCZ1NyomYDcqPkvnVQtOqladFK1CH/kBSCTmgnIJjUTkCfUvAFkUvMGkE1qJiCTmm86qVp0UrXopGrRJy+puVHzm9RMQDapmYDcqHlCzRNAngByo+aNk6pFJ1WLTqoWffISkN+kZlIzAZnU3ACZ1Dyh5puATGqeUDMBmdRsOqladFK16KRq0SfL1GwCcgPkBsiNmhsgk5oJyKRmAvKGmjeA/KaTqkUnVYtOqhZ98mVAnlDzhJoJyKTmBsikZlLzBJBJzQ2QCcgmNROQCcik5o2TqkUnVYtOqhZ98pcDMqmZgNyomYBMam7UTEAmIJOaGzUTkCeAPKFm00nVopOqRSdViz75y6mZgNyouVEzAZnU3KiZgDwBZFJzA2RS8wSQSc0bJ1WLTqoWnVQt+uTL1PwmNROQCcikZgIyqZmATGomIJOaJ9R8E5BJzaaTqkUnVYtOqhZ9sgzIbwIyqblRMwH5TUDeADKpmYBMan7TSdWik6pFJ1WL8EeqlpxULTqpWnRSteikatFJ1aKTqkUnVYtOqhadVC06qVp0UrXopGrRSdWik6pFJ1WL/gfPvk4tuHHuJQAAAABJRU5ErkJggg==" alt="QR Code">
+    <div class="info">
+        <p>This QR code links to: <code>http://localhost:3000/api/verify?id=123</code></p>
+        <p>You can scan this with any QR code scanner to verify the certificate.</p>
+    </div>
+</body>
+</html>
