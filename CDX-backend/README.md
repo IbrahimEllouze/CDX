@@ -15,5 +15,7 @@ This application allows institutions to issue and verify certificates using the 
    ```
 3. Add your Hedera credentials in `.env`.
 4. Start the server:
-   ```bash
-   npm start
+   backend: node src/server.js
+   frontend:npm run dev
+
+
